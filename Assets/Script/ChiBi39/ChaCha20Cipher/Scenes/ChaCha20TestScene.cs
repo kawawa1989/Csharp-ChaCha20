@@ -1,5 +1,5 @@
 using System.IO;
-using ChiBi39;
+using ChiBi39.ChaCha20;
 using Org.BouncyCastle.Crypto.Engines;
 using UnityEngine;
 

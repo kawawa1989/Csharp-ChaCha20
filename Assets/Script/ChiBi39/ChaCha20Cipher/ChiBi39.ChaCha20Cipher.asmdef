@@ -1,0 +1,16 @@
+{
+    "name": "ChiBi39.ChaCha20Cipher",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3b36a550d07fc44ab94abdb821907658"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

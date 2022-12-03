@@ -1,12 +1,10 @@
 {
-    "name": "ChaCha20Cipher",
+    "name": "ChiBi39.StreamCipher",
     "rootNamespace": "",
-    "references": [
-        "GUID:3b36a550d07fc44ab94abdb821907658"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": true,
+    "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

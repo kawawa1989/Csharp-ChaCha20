@@ -1,0 +1,18 @@
+{
+    "name": "ChiBi39.Aes128ChCh4",
+    "rootNamespace": "",
+    "references": [
+        "GUID:01de8a46395bb4d7d864b2d891f82a6c",
+        "GUID:71fae7e880ef549099825cbb79de3755",
+        "GUID:3b36a550d07fc44ab94abdb821907658"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

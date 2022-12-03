@@ -3,3 +3,5 @@ obj
 Logs
 *.csproj
 *.sln
+.idea/.idea.Csharp-ChaCha20/.idea
+Temp

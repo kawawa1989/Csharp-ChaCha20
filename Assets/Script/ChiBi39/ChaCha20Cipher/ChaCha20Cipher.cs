@@ -1,9 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("ChiBi39.Aes128ChCh4")]
 
-namespace ChiBi39
+namespace ChiBi39.ChaCha20
 {
     using Word = UInt32;
     
@@ -34,14 +33,14 @@ namespace ChiBi39
             state[w] = d;
         }
 
-        private const int DEFAULT_ROUND = 20;
+        private const int DEFAULT_ROUND = 10;
         private const int WORD_SIZE_BYTE = sizeof(uint);
         private const int BLOCK_SIZE_WORD = 16;
         public const int BLOCK_SIZE_BYTE = BLOCK_SIZE_WORD * WORD_SIZE_BYTE;
         public const int KEY_SIZE_BYTE = 8 * WORD_SIZE_BYTE;
         public const int NONCE_SIZE_BYTE = 3 * WORD_SIZE_BYTE;
-        private readonly byte[] m_key;
-        private readonly byte[] m_nonce;
+        internal readonly byte[] m_key;
+        internal readonly byte[] m_nonce;
         private readonly Word[] m_initialState = new Word[BLOCK_SIZE_WORD];
 
         public ChaCha20Cipher(byte[] key, byte[] nonce)
@@ -79,7 +78,6 @@ namespace ChiBi39
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ProcessBlock(byte* state, Word counter, int round = DEFAULT_ROUND)
         {
-            int r = round / 2;
             fixed (Word* pInitialState = m_initialState)
             {
                 Word* pU32State = (Word*) state;
@@ -91,7 +89,7 @@ namespace ChiBi39
 
                 // クォーターラウンド4回で1ラウンドとし、2ラウンドセットで攪拌する。
                 // これを10回繰り返して最大で20ラウンド繰り返す
-                for (int i = 0; i < r; i++)
+                for (int i = 0; i < round; i++)
                 {
                     // 1ラウンド目
                     QuarterRound(pU32State, 0, 4, 8, 12);
